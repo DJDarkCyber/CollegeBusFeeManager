@@ -23,7 +23,7 @@ Step 2: *Create a database for bus management*
 
 ### Setting Up Python Configuration and running the server
 
-Step 1: *Locate this web application's configuration File at `pysrcs/conf.py` and replace values of `DBHOST`, `DBUSERNAME`, `DBPASSWORD`, `DBNAME`*
+Step 1: *Locate this web application's configuration File at `pyscrs/conf.py` and replace values of `DBHOST`, `DBUSERNAME`, `DBPASSWORD`, `DBNAME`*
 
 Step 2: Run `startserver.py`
 
