@@ -27,7 +27,7 @@ Step 1: *Locate this web application's configuration File at `pyscrs/conf.py` an
 
 Step 2: Run `startserver.py`
 
-**Check https://github.com/DJDarkCyber/CollegeBusFeeManager/wiki for detailed setup**
+**Check https://github.com/DJDarkCyber/CollegeBusFeeManager/wiki for detailed guide for setting up**
 
 ## Screenshots
 
