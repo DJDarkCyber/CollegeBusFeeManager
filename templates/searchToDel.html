@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Fees Pay Handler | Search
+        </title>
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='imgs/favicon.ico') }}">
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/dca8b9d172.js" crossorigin="anonymous"></script>
+        <!--Importing Stylesheet-->
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/normalize.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/animate.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/stellarnav.min.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/owl.carousel.css')}}">
+        <link href="{{ url_for('static',filename='css/bootstrap.min.css')}}" rel="stylesheet">
+        <link href="{{ url_for('static',filename='css/font-awesome.min.css')}}" rel="stylesheet">
+
+        <link href="{{ url_for('static',filename='style.css')}}" rel="stylesheet">
+        <link href="{{ url_for('static',filename='css/responsive.css')}}" rel="stylesheet">
+    
+        <script src="{{ url_for('static',filename='js/vendor/modernizr-2.8.3.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/vendor/jquery-1.12.4.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/vendor/bootstrap.min.js')}}"></script>
+    
+        <!--====== PLUGINS JS ======-->
+        <script src="{{ url_for('static',filename='js/vendor/jquery.easing.1.3.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/vendor/jquery-migrate-1.2.1.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/vendor/jquery.appear.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/owl.carousel.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/stellar.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/wow.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/stellarnav.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/contact-form.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/jquery.sticky.js')}}"></script>
+    
+        <!--===== ACTIVE JS=====-->
+        <script src="{{ url_for('static',filename='js/main.js')}}"></script>
+    
+        <!--====== SCRIPTS JS ======-->
+        <script src="{{ url_for('static',filename='js/vendor/jquery-1.12.4.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/vendor/bootstrap.min.js')}}"></script>
+    
+        <!--====== PLUGINS JS ======-->
+        <script src="{{ url_for('static',filename='js/vendor/jquery.easing.1.3.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/vendor/jquery-migrate-1.2.1.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/vendor/jquery.appear.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/owl.carousel.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/stellar.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/wow.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/stellarnav.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/contact-form.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/jquery.sticky.js')}}"></script>
+    
+        <!--===== ACTIVE JS=====-->
+        <script src="{{ url_for('static',filename='js/main.js')}}"></script>
+
+    </head>
+
+<body>
+
+    <div class="preeloader">
+        <div class="loader">
+        <div class="loader-inner">
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+    <div class="mainHeaderAfterIndex">
+        
+        <div class="headerShow">
+            <div class="headerCont">
+                <a href="{{ url_for('main') }}" class="headerLink">Home</a>
+                <a href="{{ url_for('visualView') }}" class="headerLink">Visual View</a>
+                <a href="{{ url_for('overviewData') }}" class="headerLink">Overview</a>
+                <a href="{{ url_for('sortOutDetails') }}" class="headerLink">Sort Out</a>
+                <a href="#" class="headerLink" style="color: blue; text-shadow: none;"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>        
+        
+    </div>
+
+    <div class="searchContArea">
+        <div class="searchBoxArea">
+            <form action="{{url_for('deleteData')}}" class="searchBoxMainArea" method="post" class="">
+                <div style="font-size: 20px; color: red; font-weight: bold; margin-bottom: 5px; margin-top: 20px;">
+                    Search Student
+                </div>
+                <input type="search" value="" name="STUDNAME" class="searchBoxDecorationPayFee" placeholder="Search...">
+                
+            </form>
+        </div>
+
+        {% if isDeleted == "Deleted" %}
+            <script>alert("Deleted Successfully!")</script>
+        {% endif %}
+
+
+        {% if meth == "POST" %} 
+            {% if len == 0 %}
+               <script>alert("No Students Where found with this name")</script>
+            {% else %}
+        <div class="displayResult">
+        <table class="displayTable" border="1">
+            <tr>
+                <th>Student Name</th>
+                <th>Department</th>
+                <th>Year</th>
+                <!-- <th>Batch</th> -->
+                <th>Boarding Point</th>
+                <th>Total Fee</th>
+                <!-- <th>Pending Fees</th> -->
+                <th>Interact</th>
+            </tr>
+            {% for i in range(0, len)  %}
+                    <tr>
+                        <td>{{stud[i]}}</td>
+                        <td>{{dept[i]}}</td>
+                        <td>{{year[i]}}</td>
+                        <!-- <td>batch[i]}}</td> -->
+                        <td>{{board[i]}}</td>
+                        <td>{{total[i]}}</td>
+                        <!-- <td>{{pend[i]}}</td> -->
+                        <td>
+                            <form action="{{ url_for('deleteData') }}" method="post">
+                                <input type="text" name="STUDENTNAME" style="display:none;" value="{{stud[i]}}">
+                                <input type="text" name="DEPARTMENT" style="display: none;" value="{{dept[i]}}">
+                                <input type="text" name="YEAR" style="display: none;" value="{{year[i]}}">
+                                <!-- <input type="text" name="BATCH" style="display: none;" value="batch[i]}}"> -->
+                                <input type="text" name="BOARD" style="display: none;" value="{{board[i]}}">
+                                <input type="text" name="TOTAL" style="display: none;" value="{{total[i]}}">
+                                <input type="text" name="PEND" style="display: none;" value="{{pend[i]}}">
+                                <input type="text" name="delConf" style="display: none;" value="DeleteConf">
+                                <input type="submit" value="Delete" style="width: 90px; height:25px;" name="PAYFEES" class="button-87"> 
+                        
+                            </form>
+                        </td>
+                    </tr> 
+            {% endfor %}
+        </table>
+        </div>
+        {% endif %}
+        {% endif %}
+    </div>
+        <!-- {% with tests = "hello" %}
+        {% for test in tests %} 
+            <div>{{test}}</div>
+        {% endfor %}
+        {% endwith %} -->
+
+<!--Footer Area-->
+
+<div class="mainFooter">
+    <a href="#" class="FooterIcons"><i class="fa-brands fa-instagram"></i></a>
+    <a href="#" class="FooterIcons"><i class="fa-brands fa-facebook"></i></a>
+    <a href="#" class="FooterIcons"><i class="fa-brands fa-twitter"></i></a>
+    <a href="#" class="FooterIcons"><i class="fa-brands fa-linkedin"></i></a>
+</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            VV Bus Fees Handler | Pay
+        </title>
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='imgs/favicon.ico') }}">
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/dca8b9d172.js" crossorigin="anonymous"></script>
+        <!--Importing Stylesheet-->
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/normalize.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/animate.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/stellarnav.min.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/owl.carousel.css')}}">
+        <link href="{{ url_for('static',filename='css/bootstrap.min.css')}}" rel="stylesheet">
+        <link href="{{ url_for('static',filename='css/font-awesome.min.css')}}" rel="stylesheet">
+
+        <link href="{{ url_for('static',filename='style.css')}}" rel="stylesheet">
+        <link href="{{ url_for('static',filename='css/responsive.css')}}" rel="stylesheet">
+    
+        <script src="{{ url_for('static',filename='js/vendor/modernizr-2.8.3.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/vendor/jquery-1.12.4.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/vendor/bootstrap.min.js')}}"></script>
+    
+        <!--====== PLUGINS JS ======-->
+        <script src="{{ url_for('static',filename='js/vendor/jquery.easing.1.3.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/vendor/jquery-migrate-1.2.1.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/vendor/jquery.appear.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/owl.carousel.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/stellar.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/wow.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/stellarnav.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/contact-form.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/jquery.sticky.js')}}"></script>
+    
+        <!--===== ACTIVE JS=====-->
+        <script src="{{ url_for('static',filename='js/main.js')}}"></script>
+    
+        <!--====== SCRIPTS JS ======-->
+        <script src="{{ url_for('static',filename='js/vendor/jquery-1.12.4.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/vendor/bootstrap.min.js')}}"></script>
+    
+        <!--====== PLUGINS JS ======-->
+        <script src="{{ url_for('static',filename='js/vendor/jquery.easing.1.3.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/vendor/jquery-migrate-1.2.1.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/vendor/jquery.appear.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/owl.carousel.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/stellar.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/wow.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/stellarnav.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/contact-form.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/jquery.sticky.js')}}"></script>
+    
+        <!--===== ACTIVE JS=====-->
+        <script src="{{ url_for('static',filename='js/main.js')}}"></script>
+    </head>
+
+<body>
+    <div class="mainHeaderAfterIndex">
+        
+           
+        <div class="headerShow">
+            <div class="headerCont">
+                <a href="{{ url_for('main') }}" class="headerLink">Home</a>
+                <a href="{{ url_for('visualView') }}" class="headerLink">Visual View</a>
+                <a href="{{ url_for('overviewData') }}" class="headerLink">Overview</a>
+                <a href="{{ url_for('sortOutDetails') }}" class="headerLink">Sort Out</a>
+                <a href="#" class="headerLink" style="color: blue; text-shadow: none;"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>        
+        
+    </div>
+
+
+    <div class="mainContentPayAmount">
+        <div class="full border displayStudentInfoArea ">
+            <div class="displayStudentInfo">
+                Name : {{Stud}} <br>
+                Department : {{Dept}} <br>
+                Year : {{Year}} <br>
+                Batch : {{Batch}} <br>
+                Boarding Point : {{Board}} <br>
+                Total Fees : {{Total}} <br>
+                Pending Fees : {{TotalFee}} <br>
+            </div>
+        </div>
+
+        <div class="displayResultPayAmount">
+            <form action="{{url_for('amountPayed')}}" method="post">
+                <input type="text" name="STUDENTNAME" value="{{Stud}}" style="display: none;">
+                <input type="text" name="DEPARTMENT" value="{{Dept}}" style="display: none;">
+                <input type="text" name="YEAR" id="" value="{{Year}}" style="display: none;">
+                <input type="text" name="BATCH" id="" value="{{Batch}}" style="display: none;">
+                <input type="text" name="TOTAL" id="" value="{{Total}}" style="display: none;">
+                <input type="text" name="BOARD" id="" value="{{Board}}" style="display: none;">
+            <table class="displayTablePayAmount" border="1">
+                <tr>
+                    <th>Month</th>
+                    <th>Pending Fees</th>
+                    <th>Pay Now</th>
+                </tr>
+                    {% if Jan != 0 %}
+                        <tr>
+                            <td>January</td>
+                            <td>{{Jan}}</td>
+                            <td>
+                                    <input type="number" style="width: 180px; height:25px;" name="JAN" class="button-88" value="0">
+                            </td>
+                        </tr> 
+                    {% endif %}
+
+                    {% if Feb != 0 %}
+                        <tr>
+                            <td>Feburary</td>
+                            <td>{{Feb}}</td>
+                            <td>
+                                    <input type="number" style="width: 180px; height:25px;" name="FEB" class="button-88" value="0">
+                            </td>
+                        </tr> 
+                    {% endif %}
+
+                    {% if Mar != 0 %}
+                        <tr>
+                            <td>March</td>
+                            <td>{{Mar}}</td>
+                            <td>
+                                    <input type="number" style="width: 180px; height:25px;" name="MAR" class="button-88" value="0">
+                            </td>
+                        </tr> 
+                    {% endif %}
+
+                    {% if Apr != 0 %}
+                        <tr>
+                            <td>April</td>
+                            <td>{{Apr}}</td>
+                            <td>
+                                    <input type="number" style="width: 180px; height:25px;" name="APR" class="button-88" value="0">
+                            </td>
+                        </tr> 
+                    {% endif %}
+
+                    {% if May != 0 %}
+                        <tr>
+                            <td>May</td>
+                            <td>{{May}}</td>
+                            <td>
+                                    <input type="number" style="width: 180px; height:25px;" name="MAY" class="button-88" value="0">
+                            </td>
+                        </tr> 
+                    {% endif %}
+
+                    {% if Jun != 0 %}
+                        <tr>
+                            <td>June</td>
+                            <td>{{Jun}}</td>
+                            <td>
+                                    <input type="number" style="width: 180px; height:25px;" name="JUN" class="button-88" value="0">
+                            </td>
+                        </tr> 
+                    {% endif %}
+
+                    {% if Jul != 0 %}
+                        <tr>
+                            <td>July</td>
+                            <td>{{Jul}}</td>
+                            <td>
+                                    <input type="number" style="width: 180px; height:25px;" name="JUL" class="button-88" value="0"> 
+                            </td>
+                        </tr> 
+                    {% endif %}
+
+                    {% if Aug != 0 %}
+                        <tr>
+                            <td>August</td>
+                            <td>{{Aug}}</td>
+                            <td>
+                                    <input type="number" style="width: 180px; height:25px;" name="AUG" class="button-88" value="0">
+                            </td>
+                        </tr> 
+                    {% endif %}
+
+                    {% if Sep != 0 %}
+                        <tr>
+                            <td>September</td>
+                            <td>{{Sep}}</td>
+                            <td>
+                                    <input type="number" style="width: 180px; height:25px;" name="SEP" class="button-88" value="0">
+                            </td>
+                        </tr> 
+                    {% endif %}
+
+                    {% if Oct != 0 %}
+                        <tr>
+                            <td>Octomber</td>
+                            <td>{{Oct}}</td>
+                            <td>
+                                    <input type="number" style="width: 180px; height:25px;" name="OCT" class="button-88" value="0">
+                            </td>
+                        </tr> 
+                    {% endif %}
+
+                    {% if Nov != 0 %}
+                        <tr>
+                            <td>November</td>
+                            <td>{{Nov}}</td>
+                            <td>
+                                    <input type="number" style="width: 180px; height:25px;" name="NOV" class="button-88" value="0"> 
+                            </td>
+                        </tr> 
+                    {% endif %}
+
+                    {% if Dec != 0 %}
+                        <tr>
+                            <td>Decemeber</td>
+                            <td>{{Dec}}</td>
+                            <td>
+                                    <input type="number" style="width: 180px; height:25px;" name="DEC" class="button-88" value="0">
+                            </td>
+                        </tr> 
+                    {% endif %}
+
+            </table>
+            <div style="width: 100%; height: 80px; margin-top: 30px;display:flex; justify-content: center;">
+
+            <input type="submit" value="Pay Now" name="PAYFEE" class="button-87" style="width: 80px; height: 40px; display: flex;">
+                </div>
+            </form>
+            </div>
+
+            <div style="display: flex; font-weight: bolder; color:red; font-size: 32px;justify-content: flex-end; margin-top: 10px;">
+                Total Fees to Pay: {{TotalFee}}
+            </div>
+
+    </div>
+
+
+
+
+<!--Footer Area-->
+
+<div class="mainFooter">
+    <a href="#" class="FooterIcons"><i class="fa-brands fa-instagram"></i></a>
+    <a href="#" class="FooterIcons"><i class="fa-brands fa-facebook"></i></a>
+    <a href="#" class="FooterIcons"><i class="fa-brands fa-twitter"></i></a>
+    <a href="#" class="FooterIcons"><i class="fa-brands fa-linkedin"></i></a>
+</div>
+
+</body>
+
+</html>

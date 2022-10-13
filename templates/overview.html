@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            VV Bus Fees Handler | Visual View
+        </title>
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='imgs/favicon.ico') }}">
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/dca8b9d172.js" crossorigin="anonymous"></script>
+        <!--Importing Stylesheet-->
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/normalize.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/animate.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/stellarnav.min.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/owl.carousel.css')}}">
+        <link href="{{ url_for('static',filename='css/bootstrap.min.css')}}" rel="stylesheet">
+        <link href="{{ url_for('static',filename='css/font-awesome.min.css')}}" rel="stylesheet">
+
+        <link href="{{ url_for('static',filename='style.css')}}" rel="stylesheet">
+        <link href="{{ url_for('static',filename='css/responsive.css')}}" rel="stylesheet">
+    
+        <script src="{{ url_for('static',filename='js/vendor/modernizr-2.8.3.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/vendor/jquery-1.12.4.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/vendor/bootstrap.min.js')}}"></script>
+    
+        <!--====== PLUGINS JS ======-->
+        <script src="{{ url_for('static',filename='js/vendor/jquery.easing.1.3.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/vendor/jquery-migrate-1.2.1.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/vendor/jquery.appear.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/owl.carousel.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/stellar.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/wow.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/stellarnav.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/contact-form.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/jquery.sticky.js')}}"></script>
+    
+        <!--===== ACTIVE JS=====-->
+        <script src="{{ url_for('static',filename='js/main.js')}}"></script>
+    
+        <!--====== SCRIPTS JS ======-->
+        <script src="{{ url_for('static',filename='js/vendor/jquery-1.12.4.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/vendor/bootstrap.min.js')}}"></script>
+    
+        <!--====== PLUGINS JS ======-->
+        <script src="{{ url_for('static',filename='js/vendor/jquery.easing.1.3.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/vendor/jquery-migrate-1.2.1.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/vendor/jquery.appear.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/owl.carousel.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/stellar.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/wow.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/stellarnav.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/contact-form.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/jquery.sticky.js')}}"></script>
+    
+        <!--===== ACTIVE JS=====-->
+        <script src="{{ url_for('static',filename='js/main.js')}}"></script>
+    </head>
+
+<body>
+    <div class="mainHeaderAfterIndex">
+        
+           
+        <div class="headerShow">
+            <div class="headerCont">
+                <a href="{{ url_for('main') }}" class="headerLink">Home</a>
+                <a href="{{ url_for('visualView') }}" class="headerLink">Visual View</a>
+                <a href="{{ url_for('overviewData') }}" class="headerLink">Overview</a>
+                <a href="{{ url_for('sortOutDetails') }}" class="headerLink">Sort Out</a>
+                <a href="#" class="headerLink" style="color: blue; text-shadow: none;"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>        
+        
+    </div>
+
+    <div class="overViewerDisplay">
+
+
+        <h4>Total Number of Students Studing In College : </h4>
+        <p>&emsp;&emsp; {{totalStds}}</p> 
+
+        <h4>Total Number of Students Not Paid : </h4>
+        <p>&emsp;&emsp; {{ totalNotPaid }}</p>
+
+        <h4>Total Number of Departments</h4>
+        <p>&emsp;&emsp; depts</p>
+
+        <h4>Total Numbers of Students in each Departments</h4>
+        <br>
+        <p>
+            {% for key, values in totalStudsInDept %} 
+
+            &emsp;&emsp; {{key}} : {{values}}
+            <br>
+            <br>
+
+            {% endfor %}
+
+        </p>
+
+        <h4>Total Number of Students with Boarding Point</h4>
+        <table class="displayTable" border="1" style="width: 40%;">
+            
+            <tr>
+                <th>Boarding Point</th>
+                <th>Total Number Of Students</th>
+            </tr>
+
+            {% for key2, values2 in totalBoarding %} 
+
+                <tr>
+                    <td>{{ key2 }}</td>
+                    <td>{{ values2 }}</td>
+                </tr>
+            
+            {% endfor %}
+
+        </table>
+    
+    </div>
+
+
+
+
+
+<!--Footer Area-->
+
+<div class="mainFooter">
+    <a href="#" class="FooterIcons"><i class="fa-brands fa-instagram"></i></a>
+    <a href="#" class="FooterIcons"><i class="fa-brands fa-facebook"></i></a>
+    <a href="#" class="FooterIcons"><i class="fa-brands fa-twitter"></i></a>
+    <a href="#" class="FooterIcons"><i class="fa-brands fa-linkedin"></i></a>
+</div>
+
+</body>
+
+</html>

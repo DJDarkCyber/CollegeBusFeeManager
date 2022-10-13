@@ -1,0 +1,1 @@
+alert("These cities are highly risk of flood right now : Dholpur,Lakhimpur,Jalaun,Ballia,Supaul,Muzaffarpur,Bhagalpur,Buxar,BANDA,Patna,Ghazipur,Kanpur Nagar,Patna,Budaun,Bhagalpur ,Jalaun,Khagaria,Katihar,Patna,Patna,Sahibganj,Hamirpur,Gopalganj,Karauli,Barpeta,Dibrugarh,Shivsagar,Mandla,Bharuch,Baleshwar,Araria ")
