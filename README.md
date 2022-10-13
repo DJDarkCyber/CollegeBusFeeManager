@@ -7,11 +7,11 @@ Python Version : 3.10.4
 
 #### Module Versions
 
-flask : 2.1.3
-pandas : 1.4.3
-mysql : 5.7.24
-matplotlib : 3.5.2
-numpy : 1.21.5
+* flask : 2.1.3
+* pandas : 1.4.3
+* mysql : 5.7.24
+* matplotlib : 3.5.2
+* numpy : 1.21.5
 
 ## Setting up
 
