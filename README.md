@@ -37,7 +37,8 @@ Paying Fee
 ![image](https://user-images.githubusercontent.com/86729101/195604245-c56d5c59-638a-45a5-86aa-1fa9b70861a7.png)
 
 
-![image](https://user-images.githubusercontent.com/86729101/195604338-48b7e211-32ab-4f6d-ae63-3cd29d58919a.png)
+![image](https://user-images.githubusercontent.com/86729101/206500819-b63a6949-9867-49e4-8b64-bdafd0105981.png)
+
 
 Add New Entry
 ![image](https://user-images.githubusercontent.com/86729101/195604439-be70164d-2c33-42d7-a703-dd702ca4e887.png)
