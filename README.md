@@ -41,7 +41,9 @@ Paying Fee
 
 
 Add New Entry
-![image](https://user-images.githubusercontent.com/86729101/195604439-be70164d-2c33-42d7-a703-dd702ca4e887.png)
+
+![image](https://user-images.githubusercontent.com/86729101/206512301-5a5c40c4-8305-4d8f-8d57-5dda3da7922a.png)
+
 
 Editing Data
 ![image](https://user-images.githubusercontent.com/86729101/195604583-3617c88a-9e06-473f-af66-a4254c3ca003.png)
