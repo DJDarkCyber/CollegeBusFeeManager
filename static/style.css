@@ -1,6 +1,7 @@
 *{
     margin: 0px;
     padding: 0px;
+    font-family:'Courier New', Courier, monospace;
 }
 
 body{
@@ -207,6 +208,22 @@ body{
     border: solid;
     border-radius: 10px;
     border-image: linear-gradient(45deg, rgb(255, 1, 1), rgb(255, 216, 216)) 1;
+    animation: animateBorder 3s infinite;
+}
+
+@keyframes animateBorder{
+    20%{
+        border-image: linear-gradient(45deg, rgb(255, 216, 216), rgb(255, 1, 1)) 1;
+    }
+    30%{
+        border-image: linear-gradient(45deg, rgb(255, 216, 216), rgb(255, 1, 1)) 1;
+    }
+    50%{
+        border-image: linear-gradient(45deg, rgb(255, 216, 216), rgb(255, 1, 1)) 1;
+    }
+    60%{
+        border-image: linear-gradient(45deg, rgb(255, 216, 216), rgb(255, 1, 1)) 1;
+    }
 }
 
 
@@ -229,10 +246,11 @@ body{
 
 .displayResult{
     margin-top: 150px;
-    margin-left: 100px;
+    margin-left: 2%;
+    margin-right: 2%;
     position: absolute;
     width: 90%;
-    overflow: scroll;
+    overflow: auto;
     height: 800px;
     /* background-color: red; */
 }
@@ -248,6 +266,7 @@ body{
 }
 
 .displayStudentInfoArea{
+    border-radius: 10px;
     margin-left: 6%;
     padding: 40px;
     font-size: 44px;
@@ -260,6 +279,7 @@ body{
     /* background-color: rgba(146, 145, 145, 0.993); */
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     place-items: center;
+    color: red;
 }
 
 .mainContentPayAmount{
@@ -596,10 +616,11 @@ body{
 
 .displayResulAmountPayed{
     margin-top: 300px;
-    margin-left: 100px;
+    margin-left: 2%;
+    margin-right: 2%;
     position: absolute;
     width: 90%;
-    overflow: scroll;
+    overflow: auto;
     height: 800px;
     /* background-color: red; */
 }
@@ -626,16 +647,62 @@ body{
 }
 
 .addDataInputDecoration{
-    margin: 5px;
+    outline: none;
+    background-color: rgb(238, 238, 238);
+    color: red;
     border: none;
+    border-bottom: 2px solid rgb(194, 194, 194);
+    margin: 5px;
     width: 240px;
     height: 40px;
 }
 
+.addDataInputDecoration:focus{
+    animation: inputDataUnderLineAnim 2s infinite;
+}
+
+
+@keyframes inputDataUnderLineAnim{
+    10%{
+        border-bottom: 0.1px solid red;
+    }
+    20%{
+        border-bottom: 0.6px solid red;
+    }
+    30%{
+        border-bottom: 1.0px solid red;
+    }
+    40%{
+        border-bottom: 1.2px solid red;
+    }
+    50%{
+        border-bottom: 1.4px solid red;
+    }
+    60%{
+        border-bottom: 1.6px solid red;
+    }
+    70%{
+        border-bottom: 1.8px solid red;
+    }
+    80%{
+        border-bottom: 2.0px solid red;
+    }
+    90%{
+        border-bottom: 2.2px solid red;
+    }
+    100%{
+        border-bottom: 2.4px solid red;
+    }
+}
+
 .midHighLight{
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
     width: 600px;
     height: 99%;
-    background-color: rgb(221, 221, 221);;
+    /* background-color: rgb(221, 221, 221);; */
     display: flex;
     justify-content: center;
     /* place-items: center; */
