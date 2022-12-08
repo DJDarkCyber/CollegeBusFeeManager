@@ -22,7 +22,7 @@
         <link href="{{ url_for('static',filename='css/responsive.css')}}" rel="stylesheet">
     
         <script src="{{ url_for('static',filename='js/vendor/modernizr-2.8.3.min.js')}}"></script>
-        <script src="{{ url_for('static',filename='js/vendor/jquery-1.12.4.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/vendor/jquery-1.12.4.min.js')}}"></script> 
         <script src="{{ url_for('static',filename='js/vendor/bootstrap.min.js')}}"></script>
     
         <!--====== PLUGINS JS ======-->
@@ -102,17 +102,17 @@
 
     <div class="mainContentOption">
         <div class="mainContBoxArea">
-            <a href="{{ url_for('feesManager') }}" class="mainContBox1 wow rotateInDownLeft mainContDecoration  border">
+            <a href="{{ url_for('feesManager') }}" class="mainContBox1 wow fadeInUp mainContDecoration  border">
         <div class="mainContBoxTextDeco">
             Pay Fees
         </div>
         </a>
-        <a href=" {{ url_for('addOrDeleteSelect') }}" class="mainContBox2 wow rotateIn mainContDecoration  border">
+        <a href=" {{ url_for('addOrDeleteSelect') }}" class="mainContBox2 wow fadeInUp mainContDecoration  border">
         <div class="mainContBoxTextDeco">
             Add or Delete Data
         </div>
         </a>
-        <a href="{{ url_for('endTheYear') }}" class="mainContBox3 wow rotateInDownRight mainContDecoration border">
+        <a href="{{ url_for('endTheYear') }}" class="mainContBox3 wow fadeInUp mainContDecoration border">
         <div class="mainContBoxTextDeco">
             End Year
         </div>
