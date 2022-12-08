@@ -32,8 +32,7 @@ Step 2: Run `startserver.py`
 ## Screenshots
 
 Paying Fee
-![image](https://user-images.githubusercontent.com/86729101/195604061-d2658ac8-1f1f-479e-9ede-e4e3a78e2714.png)
-
+![image](https://user-images.githubusercontent.com/86729101/206487807-95abde28-bca5-4be2-84c3-c95a21835dab.png)
 
 ![image](https://user-images.githubusercontent.com/86729101/195604245-c56d5c59-638a-45a5-86aa-1fa9b70861a7.png)
 
