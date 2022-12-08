@@ -79,7 +79,6 @@ body{
     font-weight:bolder;
     text-align: center;
     margin-top: 250px;
-    transform: skew(40deg)rotate(-10deg)rotateX(50deg)translate3d(0, 0, 0);
     perspective: 100px;
     -webkit-perspective: 100px;
     text-shadow: 5px 4px 11px rgb(0,0,0), 0 2px 5px rgb(0,0,0);
@@ -88,7 +87,6 @@ body{
 
 }
 .headerImageText2{
-    transform: skew(40deg)rotate(-10deg)rotateX(50deg)translate3d(0, 0, 0);
     perspective: 100px;
     -webkit-perspective: 100px;
     color: red;
